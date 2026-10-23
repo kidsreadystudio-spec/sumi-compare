@@ -664,7 +664,7 @@ function pick(b,q){
   if(locked)return;const an=document.getElementById("an");
   if(+b.dataset.k!==q.ai){
     sfx("wrong");b.classList.add("soft","off");wrongFace(q,+b.dataset.k,b);
-    window.wc=(window.wc||0)+1;const w1=window.wc%2===1,wt=w1?"嗯…再比一比看，哪一個才對呢？":"再比一比喔～";document.getElementById("msg").textContent=wt;playVox(w1?"wrong1":"wrong2",()=>speak(wt));return;
+    window.wc=(window.wc||0)+1;const w1=window.wc%2===1,wt=w1?"嗯…再重新比比看，哪一個才對呢？":"再比一比喔～";document.getElementById("msg").textContent=wt;playVox(w1?"wrong1":"wrong2",()=>speak(wt));return;
   }
   locked=true;clearTimeout(window.cf);b.classList.add("ok");
   app.querySelectorAll(".opt").forEach(o=>{if(o!==b)o.classList.add("off")});
